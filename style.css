@@ -1,0 +1,96 @@
+:root {
+  --parent-width: 300px;
+  --parent-height: 100px;
+  --child-width: 100px;
+  --child-height: 50px;
+  --parent-bg-color: #ec9849;
+  --child-bg-color: #ff0518;
+}
+body {
+  font-family: Courier, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+pre {
+  counter-reset: line-numbering;
+  background: #2c3e50;
+  padding: 12px 0 14px 0;
+  width: 600px;
+  color: #edf0f1;
+  line-height: 140%;
+}
+hr {
+  margin: 30px;
+  display: block;
+  width: 80%;
+}
+
+.parent {
+  width: var(--parent-width);
+  height: var(--parent-height);
+  background-color: var(--parent-bg-color);
+}
+.child {
+  width: var(--child-width);
+  height: var(--child-height);
+  background-color: var(--child-bg-color);
+}
+
+/* zentRierung mit flexbox */
+.flexbox-centered .parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* zentRierung mit grid */
+.grid-centered .parent {
+  display: grid;
+  place-content: center;
+}
+
+/* zentRierung mit position */
+.position-centered .parent {
+  position: relative;
+}
+.position-centered .child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* zentRierung mit position & calc */
+.position-calc-centered .parent {
+  position: relative;
+}
+.position-calc-centered .child {
+  position: absolute;
+  top: calc(50% - ((var(--child-height)) / 2));
+  left: calc(50% - ((var(--child-width)) / 2));
+}
+
+/* zentRierung mit flex & margin */
+.flex-margin-centered .parent  {
+  display: flex;
+}
+.flex-margin-centered .child {
+  margin: auto;
+}
+
+/* zentRierung mit grid & margin */
+.grid-margin-centered .parent  {
+  display: grid;
+}
+.grid-margin-centered .child {
+  margin: auto;
+}
