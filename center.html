@@ -1,0 +1,115 @@
+<div class="container">
+ 
+  <div class="no-centered">
+    <h1>keine zentRierung</h1>
+    <div class="parent">
+      <div class="child"></div>
+    </div>  
+  </div>
+  <hr>
+
+  <div class="flexbox-centered">
+    <h1>zentRierung mit flexbox</h1>
+    <div class="parent">
+      <div class="child"></div>
+    </div>    
+    <pre>
+      /* zentRierung mit flexbox */
+      .flexbox-centered .parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </pre>
+  </div>
+  <hr>
+  
+  <div class="grid-centered">
+    <h1>zentRierung mit grid</h1>
+    <div class="parent">
+      <div class="child"></div>
+    </div>   
+    <pre>
+       /* zentRierung mit grid */
+      .grid-centered .parent {
+        display: grid;
+        place-content: center;
+      }     
+    </pre>
+  </div>  
+  <hr>
+  
+  <div class="position-centered">
+    <h1>zentRierung mit position</h1>
+    <div class="parent">
+      <div class="child"></div>
+    </div> 
+    <pre>
+      /* zentRierung mit position */
+      .position-centered .parent {
+        position: relative;
+      }
+      .position-centered .child {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </pre>
+  </div>
+  <hr>
+  
+  <div class="position-calc-centered">
+    <h1>zentRierung mit position & calc</h1>
+    <div class="parent">
+      <div class="child"></div>
+    </div>  
+    <pre>
+      /* zentRierung mit position & calc */
+      .position-calc-centered .parent {
+        position: relative;
+      }
+      .position-calc-centered .child {
+        position: absolute;
+        top: calc(50% - ((var(--child-height)) / 2));
+        left: calc(50% - ((var(--child-width)) / 2));
+      }
+    </pre>
+  </div>  
+  <hr>
+  
+  <div class="flex-margin-centered">
+    <h1>zentRierung mit flex & margin</h1>
+    <div class="parent">
+      <div class="child"></div>
+    </div> 
+    <pre>
+      /* zentRierung mit flex & margin */
+      .flex-margin-centered .parent  {
+        display: flex;
+      }
+      .flex-margin-centered .child {
+        margin: auto;
+      }
+    </pre>
+  </div>   
+  <hr>
+  
+  <div class="grid-margin-centered">
+    <h1>zentRierung mit grid & margin</h1>
+    <div class="parent">
+      <div class="child"></div>
+    </div>  
+    <pre>
+      /* zentRierung mit grid & margin */
+      .grid-margin-centered .parent  {
+        display: grid;
+      }
+      .grid-margin-centered .child {
+        margin: auto;
+      }
+    </pre>
+  </div>  
+  <hr>
+  
+</div>
